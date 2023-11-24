@@ -11,6 +11,9 @@ const config: Config = {
     darkMode: 'class',
     theme: {
         extend: {
+            boxShadow: {
+                'glow':'0 0 20px #65ddf4',
+            },
             fontFamily: {
                 mont: ['var(--font-mont)', ...fontFamily.sans],
             },

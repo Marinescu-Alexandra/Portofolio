@@ -62,7 +62,7 @@ const NavBar = () => {
         <header className='w-full sm-desktop:h-[50px] sm-desktop:bg-white sm-desktop:dark:bg-darkSecondary sm-desktop:fixed 
         px-32 sm-desktop:py-0 top-0 py-2 font-medium flex items-center justify-between dark:text-light sm-desktop:px-6 z-50'>
             
-            <button className='fixed justify-center items-center hidden sm-desktop:flex mt-0 z-20'
+            <button className='fixed justify-center items-center hidden sm-desktop:flex mt-1 z-20'
                 onClick={handleMenuClick}
             >
                 <svg width="23" height="23" viewBox="0 0 23 23">

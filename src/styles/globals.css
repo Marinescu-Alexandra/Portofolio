@@ -7,8 +7,6 @@
 }
 
 #projectDiv {
-    -webkit-box-shadow:0 0 20px "#65ddf4"; 
-    -moz-box-shadow: 0 0 20px #65ddf4; 
     box-shadow:0 0 20px #65ddf4;
 }
 

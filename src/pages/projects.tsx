@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Image, { StaticImageData } from "next/image";
+import { motion } from "framer-motion";
 import webscraper from "../../public/webscraper.png"
 import nextjs from "../../public/nextjs.png"
 import typescript from "../../public/typescript.png"
@@ -10,14 +11,30 @@ const CardHorizontal = ({ title, link, info, icons }: { title: string, link: str
     return (
         <>
             <div className="w-full flex flex-row justify-center items-center sm-desktop:flex-col sm-desktop:my-24 ">
-                <div id="projectDiv" className="w-[50%] bg-dark h-[400px] rounded-l-2xl flex items-center justify-center dark:bg-light
-                lapt sm-desktop:w-[70%] lapt sm-desktop:rounded-t-2xl lapt sm-desktop:rounded-b-none sm-desktop:h-auto
-                ">
+                <motion.div className="w-[50%] bg-dark h-[500px] rounded-l-2xl flex items-center justify-center dark:bg-lightDark
+                lapt sm-desktop:w-[90%] lapt sm-desktop:rounded-t-2xl lapt sm-desktop:rounded-b-none sm-desktop:h-auto shadow-glow"
+                    initial={{ boxShadow: 'none' }}
+                    animate={{ boxShadow: '0 0 20px #65ddf4' }}
+                    transition={{
+                        duration: 2,
+                        ease: "linear",
+                        repeat: Infinity,
+                        repeatType: "mirror",
+                    }}
+                >
                     <Image src={webscraper} alt="ProfilePicture" className="w-[75%] h-[95%] rounded-2xl" style={{ objectFit: "contain" }} />
-                </div>
-                <div id="projectDiv" className="w-[36%] h-[400px] rounded-r-2xl flex flex-col justify-around items-left lapt sm-desktop:w-[70%]
-                sm-desktop:rounded-t-none sm-desktop:rounded-b-2xl sm-desktop:h-auto
-                ">
+                </motion.div>
+                <motion.div className="w-[36%] h-[500px] rounded-r-2xl flex flex-col justify-around items-left sm-desktop:w-[90%]
+                sm-desktop:rounded-t-none sm-desktop:rounded-b-2xl sm-desktop:h-auto shadow-glow"
+                    initial={{ boxShadow: 'none' }}
+                    animate={{ boxShadow: '0 0 20px #65ddf4' }}
+                    transition={{
+                        duration: 2,
+                        ease: "linear",
+                        repeat: Infinity,
+                        repeatType: "mirror",
+                    }}
+                >
                     <h2 className="font-semibold text-2xl my-4 mx-6 dark:text-light">
                         {title}
                     </h2>
@@ -34,7 +51,7 @@ const CardHorizontal = ({ title, link, info, icons }: { title: string, link: str
                             See full details on GitHub
                         </a>
                     </div>
-                </div>
+                </motion.div>
 
             </div>
         </>
