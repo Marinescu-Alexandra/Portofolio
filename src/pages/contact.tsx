@@ -4,23 +4,23 @@ import { motion } from "framer-motion";
 const contact = () => {
     return (
         <>
-            <div className="min-h-screen w-full flex items-center justify-center">
-                    <div className="px-4 w-[50%] self-center mb-24 laptop:w-[70%] phone:w-[85%]">
+            <div className="min-h-screen w-full flex items-center justify-center ">
+                    <div className="px-4 w-[50%] self-center mb-24 laptop:w-[70%] phone:w-[80%] phone:mb-0 sm-desktop:my-24">
                         <form action="#" className="space-y-8">
                             <div>
-                                <label className="block mb-2 text-lg font-semibold text-gray-900 dark:text-gray-300">Your email</label>
+                                <label className="block mb-2 text-lg font-semibold text-gray-900 dark:text-light">Your email</label>
                                 <input type="email" id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm 
                                     rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
                                 dark:text-white" placeholder="name@mail.com" required />
                             </div>
                             <div>
-                                <label className="block mb-2 text-lg font-semibold text-gray-900 dark:text-gray-300">Subject</label>
+                            <label className="block mb-2 text-lg font-semibold text-gray-900 dark:text-light">Subject</label>
                                 <input type="text" id="subject" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border 
                                     border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700
                                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" placeholder="Let me know how can I help you" required />
                             </div>
                             <div className="sm:col-span-2">
-                                <label className="block mb-2 text-lg font-semibold text-gray-900 dark:text-gray-400">Message</label>
+                            <label className="block mb-2 text-lg font-semibold text-gray-900 dark:text-light">Message</label>
                                 <textarea id="message" rows={6} className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg 
                                     shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700
                                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white " placeholder="Your message..."></textarea>

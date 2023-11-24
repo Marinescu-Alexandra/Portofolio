@@ -7,7 +7,7 @@ const Biography = ({ innerRef }: { innerRef: RefObject<HTMLDivElement> }) => {
 
     return (
         <>
-            <div className="w-full mx-auto relative mt-56 scroll-m-24 sm-desktop:mt-4" ref={innerRef}>
+            <div className="w-full mx-auto relative mt-56 scroll-m-24 sm-desktop:my-24" ref={innerRef}>
                 <h2 className="font-bold text-8xl mb-64 w-full text-center dark:text-light tablet:text-6xl phone:text-4xl">
                     Biography
                 </h2>

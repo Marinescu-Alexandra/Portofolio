@@ -5,7 +5,7 @@ import Link from "next/link"
 import profilePic from "../../public/meprofile.png"
 import AnimatedText from "@/components/HomeComponents/animatedText"
 import { LinkArrow } from "@/components/icons"
-import HireMeText from "@/components/hireMeText"
+import HireMeText from "@/components/HomeComponents/hireMeText"
 
 export default function Home() {
     return (
@@ -14,9 +14,9 @@ export default function Home() {
             <title>Alexandra Marinescu</title>
             <meta name="description" content="content" />
         </Head>
-            <main className="flex items-center text-dark w-full min-h-screen dark:text-light phone:items-start tablet:py-12 sm-desktop:pb-16">
+            <main className="flex items-center text-dark w-full min-h-screen dark:text-light sm-desktop:my-[50px]">
             <Layout className="pt-0">
-                    <div className="flex flex-row items-center justify-between w-full sm-desktop:flex-col">
+                    <div className="flex flex-row items-center justify-between w-full sm-desktop:flex-col sm-desktop:space-y-8">
                         <div className="w-1/2 phone:w-[85%] tablet:w-[80%] laptop:w-[75%] sm-desktop:w-[70%]">
                             <Image src={profilePic} alt="ProfilePicture" className="w-full h-auto" priority
                                 sizes="(max-width: 768px) 100vw,

@@ -40,38 +40,41 @@ const about = () => {
                 <title>Alexandra Marinescu</title>
                 <meta name="description" content="content" />
             </Head>
-            <div className="flex flex-col items-center w-full h-auto my-44 sm-desktop:my-24">
-                <div className="w-[80%] self-center h-auto flex sm-desktop:hidden">
-                    <ConstellationComplete className="z-0" />
-                    <ConstellationComplete2 className=" absolute z-1 w-[80%]" />
-                </div>
-                <motion.div className="flex relative w-full items-center justify-center my-[200px] sm-desktop:hidden"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{
-                        duration: 2.5,
-                        ease: "easeInOut",
-                        repeat: 0,
-                        repeatType: "loop",
-                    }}
-                >
-                    <div className="w-[70%] flex flex-col items-center justify-center">
-                        <div className="flex flex-row items-center justify-evenly z-10 w-[97%] mb-4">
-                            {contentTextButtons.map((button, index) =>
-                                <ContentText text={button.text} length={(index + 1) * 0.25}
-                                    onLengthChange={handleLengthChange} onClick={() => handleClick(button.href)}
-                                />
-                            )}
-                        </div>
-                        <BlueDiv className="w-[99%]" length={Number(fillLength)} />
-                        <div className="flex flex-row justify-between w-full">
-                            {contentTextButtons.map((item) => 
-                                <div className="w-[30px] h-[30px] border-2 border-dark/80 rounded-full bg-light -translate-y-[65%] dark:border-light dark:bg-dark" />
-                            )}
-                            <div className="w-[30px] h-[30px] border-2 border-dark/80 rounded-full bg-light -translate-y-[65%] dark:border-light dark:bg-dark" />
-                        </div>
+            <div className="flex flex-col items-center w-full h-auto my-44 sm-desktop:my-[50px]">
+                <div className="w-full h-[85vh] flex items-center justify-center flex-col sm-desktop:h-auto">
+                    <div className="w-[80%] self-center h-auto flex sm-desktop:hidden">
+                        <ConstellationComplete className="z-0" />
+                        <ConstellationComplete2 className=" absolute z-1 w-[80%]" />
                     </div>
-                </motion.div>
+                    <motion.div className="flex relative w-full items-center justify-center my-[200px] sm-desktop:hidden"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{
+                            duration: 2.5,
+                            ease: "easeInOut",
+                            repeat: 0,
+                            repeatType: "loop",
+                        }}
+                    >
+                        <div className="w-[70%] flex flex-col items-center justify-center">
+                            <div className="flex flex-row items-center justify-evenly z-10 w-[97%] mb-4">
+                                {contentTextButtons.map((button, index) =>
+                                    <ContentText text={button.text} length={(index + 1) * 0.25}
+                                        onLengthChange={handleLengthChange} onClick={() => handleClick(button.href)}
+                                    />
+                                )}
+                            </div>
+                            <BlueDiv className="w-[99%]" length={Number(fillLength)} />
+                            <div className="flex flex-row justify-between w-full">
+                                {contentTextButtons.map((item) =>
+                                    <div className="w-[30px] h-[30px] border-2 border-dark/80 rounded-full bg-light -translate-y-[65%] dark:border-light dark:bg-dark" />
+                                )}
+                                <div className="w-[30px] h-[30px] border-2 border-dark/80 rounded-full bg-light -translate-y-[65%] dark:border-light dark:bg-dark" />
+                            </div>
+                        </div>
+                    </motion.div>
+                </div>
+
                 <Biography innerRef={biographyRef} />
                 <Experience innerRef={experienceRef} />
                 <Education innerRef={educationRef} />

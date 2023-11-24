@@ -1,10 +1,10 @@
 import React from "react";
-import { CircularText } from "./icons";
+import { CircularText } from "../icons";
 import Link from "next/link";
 
 const HireMeText = () => {
     return (
-        <div className="fixed right-10 bottom-10 items-center justify-center overflow-hidden sm-desktop:top-10 sm-desktop:bottom-auto phone:hidden">
+        <div className="fixed right-10 bottom-10 items-center justify-center overflow-hidden sm-desktop:top-14 sm-desktop:bottom-auto tablet:hidden">
             <div className="w-40 h-40 flex items-center justify-center relative">
                 <CircularText className={"fill-dark animate-spin-slow dark:fill-light"} />
                 <Link href="mailto:alexandra.marinescu.dev@proton.me" className="flex items-center justify-center

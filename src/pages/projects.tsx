@@ -9,7 +9,7 @@ import tailwind from "../../public/tailwind.png"
 const CardHorizontal = ({ title, link, info, icons }: { title: string, link: string, info: string, icons: Array<StaticImageData> }) => {
     return (
         <>
-            <div className="w-full flex flex-row justify-center items-center sm-desktop:flex-col  ">
+            <div className="w-full flex flex-row justify-center items-center sm-desktop:flex-col sm-desktop:my-24 ">
                 <div id="projectDiv" className="w-[50%] bg-dark h-[400px] rounded-l-2xl flex items-center justify-center dark:bg-light
                 lapt sm-desktop:w-[70%] lapt sm-desktop:rounded-t-2xl lapt sm-desktop:rounded-b-none sm-desktop:h-auto
                 ">
@@ -58,7 +58,7 @@ const projects = () => {
                 <title>Alexandra Marinescu</title>
                 <meta name="description" content="content" />
             </Head>
-            <div className="min-h-screen w-[70%] flex-col flex justify-center items-center mx-auto my-24 tablet:w-[90%] space-y-14">
+            <div className="min-h-screen w-[70%] flex-col flex justify-center items-center mx-auto my-24 sm-desktop:my-[50px] tablet:w-[90%] space-y-14">
                 {details.map((project, index) =>
                     <CardHorizontal title={`${project.title}`} link={`${project.link}`} info={`${project.info}`} icons={project.icons} />
                     // index % 2 == 0 ? <CardHorizontal title={`${project.title}`} link={`${project.link}`} info={`${project.info}`} icons={project.icons} />
