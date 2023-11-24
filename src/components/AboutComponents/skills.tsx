@@ -76,14 +76,14 @@ const Skills = ({ innerRef }: { innerRef: RefObject<HTMLDivElement> }) => {
     return (
         <>
             <div className="flex justify-center items-center flex-col scroll-m-24" ref={innerRef}>
-                <motion.h2
+                <h2 className="font-bold text-8xl mb-24 w-full text-center dark:text-light tablet:text-6xl phone:text-4xl">
+                    Skills
+                </h2>
+                <motion.div className="w-[50%] h-auto flex flex-col justify-around items-center"
                     initial={{ y: 50 }}
                     whileInView={{ y: 0 }}
                     transition={{ duration: 0.5, type: "spring" }}
-                    className="font-bold text-8xl mb-24 w-full text-center dark:text-light tablet:text-6xl phone:text-4xl">
-                    Skills
-                </motion.h2>
-                <div className="w-[50%] h-auto flex flex-col justify-around items-center">
+                >
                     <div className="w-[100%] h-auto flex flex-row justify-around items-center my-10 phone:flex-col phone:space-y-6 phone:my-4">
                         <Details skillLevel={0.9} skillName="NodeJS" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
                         <Details skillLevel={0.8} skillName="React" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
@@ -94,7 +94,7 @@ const Skills = ({ innerRef }: { innerRef: RefObject<HTMLDivElement> }) => {
                         <Details skillLevel={0.8} skillName="React" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
                         <Details skillLevel={0.95} skillName="JavaScript" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
                     </div>
-                </div>
+                </motion.div>
             </div>
         </>
     )

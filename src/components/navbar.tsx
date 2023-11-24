@@ -31,7 +31,7 @@ const NavBar = () => {
         setMode(window.localStorage.getItem("theme") ?? "light")
     }, [])
 
-    const handleClick = () => {
+    const handleThemeSwitch = () => {
 
         const userTheme = mode ?? window.localStorage.getItem("theme");
 
@@ -43,8 +43,19 @@ const NavBar = () => {
             setMode("dark")
             document.documentElement.classList.add("dark");
             window.localStorage.setItem("theme", "dark")
-
         }
+    }
+    useEffect(() => {
+        function handleResize() {
+            if (window.innerWidth >= 1270) {
+                setMenuOpen(false)
+            }
+        }
+        window.addEventListener('resize', handleResize)    
+    })
+    const [isMenuOpen, setMenuOpen] = useState(false)
+    const handleMenuClick = () => {
+        setMenuOpen(!isMenuOpen)
     }
 
     return (
@@ -83,7 +94,7 @@ const NavBar = () => {
                     <LinkedInIcon className=''/>
                 </motion.a>
 
-                <motion.button className='ml-3' onClick={handleClick}
+                <motion.button className='ml-3' onClick={handleThemeSwitch}
                     whileHover={{ y: -4 }}
                     whileTap={{ scale: 0.7 }}
                 >
