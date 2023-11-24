@@ -1,6 +1,6 @@
 import React, { RefObject } from "react";
 import Image from "next/image";
-import profilePic from "../../../public/me.png"
+import profilePic from "../../../public/images/me.png"
 import { motion } from "framer-motion";
 
 const Biography = ({ innerRef }: { innerRef: RefObject<HTMLDivElement> }) => {

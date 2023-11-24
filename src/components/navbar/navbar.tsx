@@ -2,16 +2,16 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Logo from './logo';
 import Image from 'next/image';
-import sun from "../../public/sun.png"
-import moon from "../../public/moon.png"
-import { useRouter, usePathname  } from 'next/navigation';
-import { GithubIcon, LinkedInIcon } from './icons';
+import sun from "../../../public/icons/sun.png"
+import moon from "../../../public/icons/moon.png"
+import { useRouter, usePathname } from 'next/navigation';
+import { GithubIcon, LinkedInIcon } from '../../../public/svg/svg';
 import { motion } from 'framer-motion';
 
-const CustomLink = ({ href, title, className="" }: {href: string, title: string, className: string}) => {
+const CustomLink = ({ href, title, className = "" }: { href: string, title: string, className: string }) => {
     const router = useRouter();
     const pathName = usePathname();
- 
+
     return (
         <Link href={href} className={`${className} relative group`}>
             {title}
@@ -51,7 +51,7 @@ const NavBar = () => {
                 setMenuOpen(false)
             }
         }
-        window.addEventListener('resize', handleResize)    
+        window.addEventListener('resize', handleResize)
     })
     const [isMenuOpen, setMenuOpen] = useState(false)
     const handleMenuClick = () => {
@@ -61,7 +61,7 @@ const NavBar = () => {
     return (
         <header className='w-full sm-desktop:h-[50px] sm-desktop:bg-white sm-desktop:dark:bg-darkSecondary sm-desktop:fixed 
         px-32 sm-desktop:py-0 top-0 py-2 font-medium flex items-center justify-between dark:text-light sm-desktop:px-6 z-50'>
-            
+
             <button className='fixed justify-center items-center hidden sm-desktop:flex mt-1 z-20'
                 onClick={handleMenuClick}
             >
@@ -167,13 +167,13 @@ const NavBar = () => {
 
             </motion.div>
 
-            
+
 
             <nav className='flex-1 sm-desktop:hidden'>
-                <CustomLink href="/" title="Home" className='mr-4'/>
-                <CustomLink href="/about" title="About" className='mx-4'/>
-                <CustomLink href="/projects"title="Projects" className='mx-4'/>
-                <CustomLink href="/contact" title="Contact" className='ml-4'/>
+                <CustomLink href="/" title="Home" className='mr-4' />
+                <CustomLink href="/about" title="About" className='mx-4' />
+                <CustomLink href="/projects" title="Projects" className='mx-4' />
+                <CustomLink href="/contact" title="Contact" className='ml-4' />
             </nav>
             <div className='top-2 flex-1 sm-desktop:hidden'>
                 <Logo />
@@ -181,19 +181,19 @@ const NavBar = () => {
             <nav className='flex flex-row items-center justify-end flex-wrap flex-1 sm-desktop:hidden'>
 
                 <motion.a href="https://github.com/Marinescu-Alexandra" target={"_blank"}
-                whileHover={{ y: -4 }}
-                className='w-9 mr-3 mb-0.4'
-                whileTap={{ scale:0.7}}
+                    whileHover={{ y: -4 }}
+                    className='w-9 mr-3 mb-0.4'
+                    whileTap={{ scale: 0.7 }}
                 >
-                    <GithubIcon className=''/>
+                    <GithubIcon className='' />
                 </motion.a>
 
                 <motion.a href="https://www.linkedin.com/in/alexandra-marinescu-profile/" target={"_blank"}
-                whileHover={{ y: -4 }}
-                className='w-8 mx-3'
-                whileTap={{ scale:0.7}}
+                    whileHover={{ y: -4 }}
+                    className='w-8 mx-3'
+                    whileTap={{ scale: 0.7 }}
                 >
-                    <LinkedInIcon className=''/>
+                    <LinkedInIcon className='' />
                 </motion.a>
 
                 <motion.button className='ml-3' onClick={handleThemeSwitch}

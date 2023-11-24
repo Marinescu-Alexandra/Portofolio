@@ -1,13 +1,13 @@
-import { BlueDiv, ConstellationComplete, ConstellationComplete2 } from "@/components/icons";
+import { BlueDiv, ConstellationLower, ConstellationUpper } from "../../public/svg/svg";
 import React from "react";
 import { useState, useRef, RefObject } from "react";
 import Head from "next/head";
 import { motion } from "framer-motion";
-import ContentText from "@/components/AboutComponents/aboutContentText";
-import Experience from "@/components/AboutComponents/experience";
-import Education from "@/components/AboutComponents/education";
-import Biography from "@/components/AboutComponents/biography";
-import Skills from "@/components/AboutComponents/skills";
+import ContentText from "@/components/about/aboutContentText";
+import Experience from "@/components/about/experience";
+import Education from "@/components/about/education";
+import Biography from "@/components/about/biography";
+import Skills from "@/components/about/skills";
 
 
 const about = () => {
@@ -40,11 +40,11 @@ const about = () => {
                 <title>Alexandra Marinescu</title>
                 <meta name="description" content="content" />
             </Head>
-            <div className="flex flex-col items-center w-full h-auto my-44 sm-desktop:my-[50px]">
-                <div className="w-full h-[85vh] flex items-center justify-center flex-col sm-desktop:h-auto">
-                    <div className="w-[80%] self-center h-auto flex sm-desktop:hidden">
-                        <ConstellationComplete className="z-0" />
-                        <ConstellationComplete2 className=" absolute z-1 w-[80%]" />
+            <div className="w-full h-auto flex flex-col items-center my-44 sm-desktop:my-[50px]">
+                <div className="w-full h-[85vh] flex flex-col items-center justify-center sm-desktop:h-auto">
+                    <div className="w-[80%] h-auto flex sm-desktop:hidden">
+                        <ConstellationUpper className="z-0" />
+                        <ConstellationLower className=" absolute z-1 w-[80%]" />
                     </div>
                     <motion.div className="flex relative w-full items-center justify-center my-[200px] sm-desktop:hidden"
                         initial={{ opacity: 0 }}

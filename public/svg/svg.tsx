@@ -73,7 +73,7 @@ export const CircularText = ({ className, ...rest }: {className: string}) => (
   </svg>
 )
 
-export const ConstellationComplete =  ({ className, ...rest }: {className: string}) => (
+export const ConstellationUpper=  ({ className, ...rest }: {className: string}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="56.494 80.276 391.594 87.324"
@@ -215,7 +215,7 @@ export const ConstellationComplete =  ({ className, ...rest }: {className: strin
   </svg>
 )
 
-export const ConstellationComplete2 =  ({ className, ...rest }: {className: string}) => (
+export const ConstellationLower =  ({ className, ...rest }: {className: string}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
         viewBox="56.494 80.276 391.594 87.324"
