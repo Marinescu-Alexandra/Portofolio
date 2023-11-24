@@ -3,7 +3,7 @@ import Head from "next/head"
 import Image from 'next/image'
 import Link from "next/link"
 import { LinkArrow } from "@/svg/svg"
-import profilePic from "@/images/meprofile.png"
+import profilePic from "@/images/meprofile2.png"
 import AnimatedText from "@/components/home/animatedText"
 import Layout from "@/components/layouts/layout"
 import HireMeText from "@/components/home/hireMeText"
