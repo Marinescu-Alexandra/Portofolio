@@ -46,7 +46,7 @@ const Education = ({ innerRef }: { innerRef: RefObject<HTMLDivElement> }) => {
                 </h2>
                 <div ref={ref} className="w-[75%] phone:w-[85%] mx-auto relative">
                     <motion.div style={{ scaleY: scrollYProgress }} className="absolute left-9 top-5 w-[4px] h-full bg-dark origin-top dark:bg-light" />
-                    <ul className="w-full flex flex-col items-start justify-between ml-4 mb-96">
+                    <ul className="w-full flex flex-col items-start justify-between ml-4">
                         <Details
                             type="Bachelor Degree In Computer Sience and Mathematics"
                             time="2019-2023" place="University Of Bucharest"

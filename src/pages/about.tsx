@@ -1,14 +1,13 @@
-import { BlueDiv, ConstellationLower, ConstellationUpper } from "../../public/svg/svg";
-import React from "react";
-import { useState, useRef, RefObject } from "react";
 import Head from "next/head";
+import React, { useState, useRef, RefObject } from "react";
 import { motion } from "framer-motion";
 import ContentText from "@/components/about/aboutContentText";
 import Experience from "@/components/about/experience";
 import Education from "@/components/about/education";
 import Biography from "@/components/about/biography";
 import Skills from "@/components/about/skills";
-
+import Layout from "@/components/layouts/layout";
+import { BlueDiv, ConstellationLower, ConstellationUpper } from "@/svg/svg";
 
 const about = () => {
 
@@ -40,46 +39,52 @@ const about = () => {
                 <title>Alexandra Marinescu</title>
                 <meta name="description" content="content" />
             </Head>
-            <div className="w-full h-auto flex flex-col items-center my-44 sm-desktop:my-[50px]">
-                <div className="w-full h-[85vh] flex flex-col items-center justify-center sm-desktop:h-auto">
-                    <div className="w-[80%] h-auto flex sm-desktop:hidden">
-                        <ConstellationUpper className="z-0" />
-                        <ConstellationLower className=" absolute z-1 w-[80%]" />
-                    </div>
-                    <motion.div className="flex relative w-full items-center justify-center my-[200px] sm-desktop:hidden"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{
-                            duration: 2.5,
-                            ease: "easeInOut",
-                            repeat: 0,
-                            repeatType: "loop",
-                        }}
-                    >
-                        <div className="w-[70%] flex flex-col items-center justify-center">
-                            <div className="flex flex-row items-center justify-evenly z-10 w-[97%] mb-4">
-                                {contentTextButtons.map((button, index) =>
-                                    <ContentText text={button.text} length={(index + 1) * 0.25}
-                                        onLengthChange={handleLengthChange} onClick={() => handleClick(button.href)}
-                                    />
-                                )}
+            <main className="w-full min-h-screen flex items-center text-dark dark:text-light">
+                <Layout className="!p-0">
+                    <div className="flex flex-col items-center gap-y-80 mb-64 sm-desktop:mt-24 sm-desktop:gap-y-44">
+                        <div className="w-full min-h-screen flex flex-col items-center justify-center gap-y-40 sm-desktop:hidden">
+                            <div className="w-[80%] h-full flex items-center justify-center">
+                                <ConstellationUpper className="w-full" />
+                                <ConstellationLower className="absolute w-[80%]" />
                             </div>
-                            <BlueDiv className="w-[99%]" length={Number(fillLength)} />
-                            <div className="flex flex-row justify-between w-full">
-                                {contentTextButtons.map((item) =>
-                                    <div className="w-[30px] h-[30px] border-2 border-dark/80 rounded-full bg-light -translate-y-[65%] dark:border-light dark:bg-dark" />
-                                )}
-                                <div className="w-[30px] h-[30px] border-2 border-dark/80 rounded-full bg-light -translate-y-[65%] dark:border-light dark:bg-dark" />
-                            </div>
+                            <motion.div className="flex w-full items-center justify-center sm-desktop:hidden"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{
+                                    duration: 2.5,
+                                    ease: "easeInOut",
+                                    repeat: 0,
+                                    repeatType: "loop",
+                                }}
+                            >
+                                <div className="w-[70%] flex flex-col items-center justify-center">
+                                    <div className="w-full flex flex-row items-center mb-4 px-4">
+                                        {contentTextButtons.map((button, index) =>
+                                            <ContentText text={button.text} length={(index + 1) * 0.25}
+                                                onLengthChange={handleLengthChange} onClick={() => handleClick(button.href)}
+                                            />
+                                        )}
+                                    </div>
+                                    <BlueDiv className="w-full" length={Number(fillLength)} />
+                                    <div className="w-full flex flex-row justify-between">
+                                        {   
+                                            new Array(contentTextButtons.length + 1).fill(null).map(() =>
+                                                <div className="w-[30px] h-[30px] border-2 border-dark/80 rounded-full
+                                                    bg-light -translate-y-[65%] dark:border-light dark:bg-dark" />
+                                            )
+                                        }
+                                    </div>
+                                </div>
+                            </motion.div>
                         </div>
-                    </motion.div>
-                </div>
+                        <Biography innerRef={biographyRef} />
+                        <Experience innerRef={experienceRef} />
+                        <Education innerRef={educationRef} />
+                        <Skills innerRef={skillsRef} />
+                    </div>
+                </Layout>
+            </main>
 
-                <Biography innerRef={biographyRef} />
-                <Experience innerRef={experienceRef} />
-                <Education innerRef={educationRef} />
-                <Skills innerRef={skillsRef} />
-            </div>
         </>
 
     )

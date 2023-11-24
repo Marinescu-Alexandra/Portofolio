@@ -2,10 +2,10 @@ import React from "react";
 import Head from "next/head";
 import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
-import webscraper from "../../public/webscraper.png"
-import nextjs from "../../public/nextjs.png"
-import typescript from "../../public/typescript.png"
-import tailwind from "../../public/tailwind.png"
+import webscraper from "@/images/webscraper.png"
+import nextjs from "@/icons/nextjs.png"
+import typescript from "@/icons/typescript.png"
+import tailwind from "@/icons/tailwind.png"
 
 const CardHorizontal = ({ title, link, info, icons }: { title: string, link: string, info: string, icons: Array<StaticImageData> }) => {
     return (
@@ -52,7 +52,6 @@ const CardHorizontal = ({ title, link, info, icons }: { title: string, link: str
                         </a>
                     </div>
                 </motion.div>
-
             </div>
         </>
     )
@@ -76,10 +75,8 @@ const projects = () => {
                 <meta name="description" content="content" />
             </Head>
             <div className="min-h-screen w-[70%] flex-col flex justify-center items-center mx-auto my-24 sm-desktop:my-[50px] tablet:w-[90%] space-y-14">
-                {details.map((project, index) =>
+                {details.map((project) =>
                     <CardHorizontal title={`${project.title}`} link={`${project.link}`} info={`${project.info}`} icons={project.icons} />
-                    // index % 2 == 0 ? <CardHorizontal title={`${project.title}`} link={`${project.link}`} info={`${project.info}`} icons={project.icons} />
-                    //     : <CardVertical title={`${project.title}`} link={`${project.link}`} info={`${project.info}`} icons={project.icons} />
                 )}
             </div>
         </>

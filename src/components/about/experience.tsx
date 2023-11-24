@@ -47,8 +47,8 @@ const Experience = ({ innerRef }: { innerRef: RefObject<HTMLDivElement> }) => {
                     Experience
                 </h2>
                 <div ref={ref} className="w-[75%] phone:w-[85%] mx-auto relative">
-                    <motion.div style={{ scaleY: scrollYProgress }} className="absolute left-9 top-5 w-[4px] h-full bg-dark origin-top dark:bg-light" />
-                    <ul className="w-full flex flex-col items-start justify-between ml-4 mb-96">
+                    <motion.div style={{ scaleY: scrollYProgress }} className="absolute left-9 top-5 w-[4px] h-full origin-top bg-dark dark:bg-light" />
+                    <ul className="w-full flex flex-col items-start justify-between ml-4">
                         <Details
                             position="iOS Developer" company="IT Smart Systems" companyLink="www.google.com"
                             time="2022-2023" address="Bucuresti, Romania"

@@ -75,7 +75,7 @@ const Details = ({ skillLevel, skillName, info }: {
 const Skills = ({ innerRef }: { innerRef: RefObject<HTMLDivElement> }) => {
     return (
         <>
-            <div className="flex justify-center items-center flex-col scroll-m-24" ref={innerRef}>
+            <div className="flex justify-center items-center flex-col" ref={innerRef}>
                 <h2 className="font-bold text-8xl mb-24 w-full text-center dark:text-light tablet:text-6xl phone:text-4xl">
                     Skills
                 </h2>
