@@ -16,12 +16,12 @@ const Biography = ({ innerRef }: { innerRef: RefObject<HTMLDivElement> }) => {
                     transition={{ duration: 0.5, type: "spring" }}
                 >
                     <div className="w-full h-full flex justify-center items-center border-[1px] border-dark/10 dark:border-light rounded-2xl
-                                  bg-light dark:bg-dark shadow-xl"
+                                  bg-white dark:bg-dark shadow-xl"
                     >
                         <div className="flex flex-col justify-between items-center w-[75%] h-[full-75px]">
                             <div className="font-bold text-gray-700 rounded-full shadow-xl absolute top-0 mt-[-75px]
                             bg-light border-[2px] border-dark/10 font-mono w-[150px] h-[150px]">
-                                <Image src={profilePic} alt="ProfilePicture" className="w-[150px] h-[150px] rounded-full" priority
+                                <Image src={profilePic} alt="ProfilePicture" className="w-[150px] h-[150px] rounded-full border-2 border-white" priority
                                     sizes="(max-width: 768px) 100vw,
                                            (max-width: 1200px) 50vw,
                                             50vw"

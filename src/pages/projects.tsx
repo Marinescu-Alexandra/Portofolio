@@ -6,15 +6,16 @@ import webscraper from "@/images/webscraper.png"
 import nextjs from "@/icons/nextjs.png"
 import typescript from "@/icons/typescript.png"
 import tailwind from "@/icons/tailwind.png"
+import Layout from "@/components/layouts/layout";
 
 const CardHorizontal = ({ title, link, info, icons }: { title: string, link: string, info: string, icons: Array<StaticImageData> }) => {
     return (
         <>
-            <div className="w-full flex flex-row justify-center items-center sm-desktop:flex-col sm-desktop:my-24 ">
+            <div className="w-full flex flex-row justify-center items-center sm-desktop:flex-col">
                 <motion.div className="w-[50%] bg-dark h-[500px] rounded-l-2xl flex items-center justify-center dark:bg-lightDark
-                lapt sm-desktop:w-[90%] lapt sm-desktop:rounded-t-2xl lapt sm-desktop:rounded-b-none sm-desktop:h-auto shadow-glow"
-                    initial={{ boxShadow: 'none' }}
-                    animate={{ boxShadow: '0 0 20px #65ddf4' }}
+                sm-desktop:w-[90%] sm-desktop:rounded-t-2xl sm-desktop:rounded-b-none sm-desktop:h-auto shadow-glow"
+                    initial={{ boxShadow: '0 0 5px #65ddf4' }}
+                    animate={{ boxShadow: '0 0 22px #65ddf4' }}
                     transition={{
                         duration: 2,
                         ease: "linear",
@@ -25,9 +26,9 @@ const CardHorizontal = ({ title, link, info, icons }: { title: string, link: str
                     <Image src={webscraper} alt="ProfilePicture" className="w-[75%] h-[95%] rounded-2xl" style={{ objectFit: "contain" }} />
                 </motion.div>
                 <motion.div className="w-[36%] h-[500px] rounded-r-2xl flex flex-col justify-around items-left sm-desktop:w-[90%]
-                sm-desktop:rounded-t-none sm-desktop:rounded-b-2xl sm-desktop:h-auto shadow-glow"
-                    initial={{ boxShadow: 'none' }}
-                    animate={{ boxShadow: '0 0 20px #65ddf4' }}
+                sm-desktop:rounded-t-none sm-desktop:rounded-b-2xl sm-desktop:h-auto shadow-glow bg-white dark:bg-dark"
+                    initial={{ boxShadow: '0 0 5px #65ddf4' }}
+                    animate={{ boxShadow: '0 0 22px #65ddf4' }}
                     transition={{
                         duration: 2,
                         ease: "linear",
@@ -43,11 +44,16 @@ const CardHorizontal = ({ title, link, info, icons }: { title: string, link: str
                     </p>
                     <div className="flex flex-row justify-left items-center mx-6 space-x-4 mb-4">
                         {icons.map((icon) =>
-                            <Image src={icon} alt="nextjsImage" className="rounded-full bg-light sm-desktop:h-[30px] sm-desktop:w-[30px]" width={50} height={50} />
+                            <Image
+                                src={icon}
+                                alt="nextjsImage"
+                                className="rounded-full bg-light sm-desktop:h-[30px] sm-desktop:w-[30px] border-2"
+                                width={50}
+                                height={50} />
                         )}
                     </div>
                     <div className="flex text-medium font-medium text-light mx-6 mb-6 dark:text-dark">
-                        <a className="rounded-lg bg-dark px-2 py-1 left-0 dark:bg-light">
+                        <a className="rounded-lg bg-dark px-2 py-1 left-0 dark:bg-black dark:text-light dark:border-2 dark:border-light">
                             See full details on GitHub
                         </a>
                     </div>
@@ -74,11 +80,17 @@ const projects = () => {
                 <title>Alexandra Marinescu</title>
                 <meta name="description" content="content" />
             </Head>
-            <div className="min-h-screen w-[70%] flex-col flex justify-center items-center mx-auto my-24 sm-desktop:my-[50px] tablet:w-[90%] space-y-14">
-                {details.map((project) =>
-                    <CardHorizontal title={`${project.title}`} link={`${project.link}`} info={`${project.info}`} icons={project.icons} />
-                )}
-            </div>
+            <main>
+                <Layout>
+                    <div className="min-h-screen w-[70%] flex-col flex justify-center items-center mx-auto tablet:w-[90%] 
+                                    gap-y-28 mt-24 sm-desktop:gap-y-20 bg-dark">
+                        {details.map((project) =>
+                            <CardHorizontal title={`${project.title}`} link={`${project.link}`} info={`${project.info}`} icons={project.icons} />
+                        )}
+                    </div>
+                </Layout>
+            </main>
+
         </>
 
     )

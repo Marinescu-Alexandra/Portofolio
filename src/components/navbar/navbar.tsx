@@ -107,7 +107,7 @@ const NavBar = () => {
                 </svg>
             </button>
 
-            <motion.div className="fixed top-0 -left-1 bottom-0 w-[300px] bg-lightDark dark:bg-gray z-10 
+            <motion.div className="fixed top-0 -left-1 bottom-0 w-[300px] bg-lightGray dark:bg-gray z-10 
             flex flex-col items-center justify-start space-y-16"
                 animate={isMenuOpen ? "open" : "closed"}
                 variants={{
@@ -167,17 +167,17 @@ const NavBar = () => {
 
             </motion.div>
 
-
-
             <nav className='flex-1 sm-desktop:hidden'>
                 <CustomLink href="/" title="Home" className='mr-4' />
                 <CustomLink href="/about" title="About" className='mx-4' />
                 <CustomLink href="/projects" title="Projects" className='mx-4' />
                 <CustomLink href="/contact" title="Contact" className='ml-4' />
             </nav>
+
             <div className='top-2 flex-1 sm-desktop:hidden'>
                 <Logo />
             </div>
+
             <nav className='flex flex-row items-center justify-end flex-wrap flex-1 sm-desktop:hidden'>
 
                 <motion.a href="https://github.com/Marinescu-Alexandra" target={"_blank"}
