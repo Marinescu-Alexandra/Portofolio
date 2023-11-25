@@ -185,7 +185,20 @@ const NavBar = () => {
                         whileTap={{ scale: 0.7 }}
                     >
                         {
-                            mode === "dark" ? <Image src={moon} alt='darkThemeIcon' width={30} height={30} /> : <Image src={sun} alt='lightThemeIcon' width={30} height={30} />
+                            mode === "dark" ?
+                                <Image src={moon} alt='darkThemeIcon' width={30} height={30}
+                                    priority
+                                    sizes="(max-width: 768px) 100vw,
+                                           (max-width: 1200px) 50vw,
+                                           50vw"
+                                />
+                                :
+                                <Image src={sun} alt='lightThemeIcon' width={30} height={30}
+                                    priority
+                                    sizes="(max-width: 768px) 100vw,
+                                           (max-width: 1200px) 50vw,
+                                            50vw"
+                                />
                         }
                     </motion.button>
                 </nav>
@@ -226,7 +239,20 @@ const NavBar = () => {
                     whileTap={{ scale: 0.7 }}
                 >
                     {
-                        mode === "dark" ? <Image src={moon} alt='darkThemeIcon' width={30} height={30} /> : <Image src={sun} alt='lightThemeIcon' width={30} height={30} />
+                        mode === "dark" ?
+                            <Image src={moon} alt='darkThemeIcon' width={30} height={30}
+                                priority
+                                sizes=" (max-width: 768px) 100vw,
+                                        (max-width: 1200px) 50vw,
+                                        50vw"
+                            />
+                            :
+                            <Image src={sun} alt='lightThemeIcon' width={30} height={30}
+                                priority
+                                sizes=" (max-width: 768px) 100vw,
+                                        (max-width: 1200px) 50vw,
+                                        50vw"
+                            />
                     }
                 </motion.button>
             </nav>

@@ -24,7 +24,12 @@ const CardHorizontal = ({ title, link, info, icons }: { title: string, link: str
                         repeatType: "mirror",
                     }}
                 >
-                    <Image src={webscraper} alt="ProfilePicture" className="w-[75%] h-[95%] rounded-2xl" style={{ objectFit: "contain" }} />
+                    <Image src={webscraper} alt="ProfilePicture" className="w-auto h-[95%] rounded-2xl" style={{ objectFit: "contain" }}
+                        priority
+                        sizes="(max-width: 768px) 100vw,
+                               (max-width: 1200px) 50vw,
+                               50vw"
+                    />
                 </motion.div>
                 <motion.div className="w-[36%] h-[500px] rounded-r-2xl flex flex-col justify-around items-left sm-desktop:w-[90%]
                 sm-desktop:rounded-t-none sm-desktop:rounded-b-2xl sm-desktop:h-auto shadow-glow bg-white dark:bg-dark"
@@ -50,7 +55,12 @@ const CardHorizontal = ({ title, link, info, icons }: { title: string, link: str
                                 alt="nextjsImage"
                                 className="rounded-full bg-light sm-desktop:h-[30px] sm-desktop:w-[30px] border-2"
                                 width={50}
-                                height={50} />
+                                height={50}
+                                priority
+                                sizes="(max-width: 768px) 100vw,
+                                       (max-width: 1200px) 50vw,
+                                        50vw"
+                            />
                         )}
                     </div>
                     <div className="flex text-medium font-medium text-light mx-6 mb-6 dark:text-dark">
