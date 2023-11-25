@@ -7,6 +7,7 @@ import profilePic from "@/images/meprofile2.png"
 import AnimatedText from "@/components/home/animatedText"
 import Layout from "@/components/layouts/layout"
 import HireMeText from "@/components/home/hireMeText"
+import PageTransition from "@/components/transitions/pageTransitions"
 
 export default function Home() {
     return (
@@ -15,6 +16,7 @@ export default function Home() {
             <title>Alexandra Marinescu</title>
             <meta name="description" content="content" />
         </Head>
+        <PageTransition/>  
         <main className="w-full min-h-screen flex items-center text-dark dark:text-light">
             <Layout>
                 <div className="w-full flex flex-row items-center justify-between sm-desktop:flex-col sm-desktop:space-y-8">

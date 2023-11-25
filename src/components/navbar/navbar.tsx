@@ -60,7 +60,7 @@ const NavBar = () => {
 
     return (
         <header className='w-full sm-desktop:h-[50px] sm-desktop:bg-white sm-desktop:dark:bg-darkSecondary sm-desktop:fixed 
-        px-32 sm-desktop:py-0 top-0 py-2 font-medium flex items-center justify-between dark:text-light sm-desktop:px-6 z-50'>
+        px-32 sm-desktop:py-0 top-0 py-2 font-medium flex items-center justify-between dark:text-light sm-desktop:px-6 z-20'>
 
             <button className='fixed justify-center items-center hidden sm-desktop:flex mt-1 z-20'
                 onClick={handleMenuClick}
@@ -106,9 +106,9 @@ const NavBar = () => {
                     />
                 </svg>
             </button>
-
-            <motion.div className="fixed top-0 -left-1 bottom-0 w-[300px] bg-lightGray dark:bg-gray z-10 
-            flex flex-col items-center justify-start space-y-16"
+            
+            <motion.div className='fixed -top-2 left-0 bottom-0 w-full bg-gray/70 dark:bg-gray/70 z-10 flex'
+                onClick={() => setMenuOpen(false)}
                 animate={isMenuOpen ? "open" : "closed"}
                 variants={{
                     open: (height = 1000) => ({
@@ -129,9 +129,34 @@ const NavBar = () => {
                         }
                     }
                 }}
+            />
+
+            <motion.div className="fixed -top-2 left-0 bottom-0 w-[300px] bg-lightGray dark:bg-gray z-10 
+            flex flex-col items-center justify-start space-y-16"
+                animate={isMenuOpen ? "open" : "closed"}
+                variants={{
+                    open: (height = 1000) => ({
+                        clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+                        transition: {
+                            type: "spring",
+                            stiffness: 20,
+                            restDelta: 2
+                        }
+                    }),
+                    closed: {
+                        clipPath: "circle(0px at 40px 40px)",
+                        transition: {
+                            delay: 0.2,
+                            type: "spring",
+                            stiffness: 400,
+                            damping: 40,
+                            
+                        }
+                    }
+                }}
             >
-                <div className='mt-24 flex flex-col justify-center items-center space-y-4'>
-                    <CustomLink href="/" title="Home" className='text-xl' />
+                <div className='mt-24 flex flex-col justify-center items-center space-y-4' onClick={handleMenuClick}>
+                    <CustomLink href="/" title="Home" className='text-xl'/>
                     <CustomLink href="/about" title="About" className='text-xl' />
                     <CustomLink href="/projects" title="Projects" className='text-xl' />
                     <CustomLink href="/contact" title="Contact" className='text-xl' />

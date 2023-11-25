@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Biography = ({ innerRef }: { innerRef: RefObject<HTMLDivElement> }) => {
     return (
         <>
-            <div className="w-full relative" ref={innerRef}>
+            <div className="w-full relative scroll-mt-24" ref={innerRef}>
                 <h2 className="font-bold text-8xl mb-64 w-full text-center dark:text-light tablet:text-6xl phone:text-4xl sm-desktop:mb-44">
                     Biography
                 </h2>

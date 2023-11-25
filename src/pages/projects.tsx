@@ -7,6 +7,7 @@ import nextjs from "@/icons/nextjs.png"
 import typescript from "@/icons/typescript.png"
 import tailwind from "@/icons/tailwind.png"
 import Layout from "@/components/layouts/layout";
+import PageTransition from "@/components/transitions/pageTransitions";
 
 const CardHorizontal = ({ title, link, info, icons }: { title: string, link: string, info: string, icons: Array<StaticImageData> }) => {
     return (
@@ -80,10 +81,11 @@ const projects = () => {
                 <title>Alexandra Marinescu</title>
                 <meta name="description" content="content" />
             </Head>
+            <PageTransition/>
             <main>
                 <Layout>
                     <div className="min-h-screen w-[70%] flex-col flex justify-center items-center mx-auto tablet:w-[90%] 
-                                    gap-y-28 mt-24 sm-desktop:gap-y-20 bg-dark">
+                                    gap-y-28 mt-24 sm-desktop:gap-y-20">
                         {details.map((project) =>
                             <CardHorizontal title={`${project.title}`} link={`${project.link}`} info={`${project.info}`} icons={project.icons} />
                         )}

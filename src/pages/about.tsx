@@ -8,6 +8,7 @@ import Biography from "@/components/about/biography";
 import Skills from "@/components/about/skills";
 import Layout from "@/components/layouts/layout";
 import { BlueDiv, ConstellationLower, ConstellationUpper } from "@/svg/svg";
+import PageTransition from "@/components/transitions/pageTransitions";
 
 const about = () => {
 
@@ -39,6 +40,7 @@ const about = () => {
                 <title>Alexandra Marinescu</title>
                 <meta name="description" content="content" />
             </Head>
+            <PageTransition/>
             <main className="w-full min-h-screen flex items-center text-dark dark:text-light">
                 <Layout className="!p-0">
                     <div className="flex flex-col items-center gap-y-80 mb-64 sm-desktop:mt-24 sm-desktop:gap-y-44">

@@ -4,7 +4,7 @@ import { CircularText } from "@/svg/svg";
 
 const HireMeText = () => {
     return (
-        <div className="fixed right-10 bottom-10 items-center justify-center overflow-hidden sm-desktop:top-14 sm-desktop:bottom-auto tablet:hidden">
+        <div className="fixed z-10 right-10 bottom-10 items-center justify-center overflow-hidden sm-desktop:top-14 sm-desktop:bottom-auto tablet:hidden">
             <div className="w-40 h-40 relative flex items-center justify-center">
                 <CircularText className={"animate-spin-slow fill-dark dark:fill-light"} />
                 <Link

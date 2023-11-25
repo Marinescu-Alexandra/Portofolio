@@ -42,7 +42,7 @@ const Experience = ({ innerRef }: { innerRef: RefObject<HTMLDivElement> }) => {
 
     return (
         <>
-            <div>
+            <div className="scroll-mt-24">
                 <h2 className="font-bold text-8xl mb-32 w-full text-center scroll-m-16 dark:text-light tablet:text-6xl phone:text-4xl" ref={innerRef}>
                     Experience
                 </h2>

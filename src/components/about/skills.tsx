@@ -75,8 +75,8 @@ const Details = ({ skillLevel, skillName, info }: {
 const Skills = ({ innerRef }: { innerRef: RefObject<HTMLDivElement> }) => {
     return (
         <>
-            <div className="flex justify-center items-center flex-col" ref={innerRef}>
-                <h2 className="font-bold text-8xl mb-24 w-full text-center dark:text-light tablet:text-6xl phone:text-4xl">
+            <div className="flex justify-center items-center flex-col scroll-mt-24" ref={innerRef}>
+                <h2 className="font-bold text-8xl mb-20 w-full text-center dark:text-light tablet:text-6xl phone:text-4xl">
                     Skills
                 </h2>
                 <motion.div className="w-[50%] h-auto flex flex-col justify-around items-center"
