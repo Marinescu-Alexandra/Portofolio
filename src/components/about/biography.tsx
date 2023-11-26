@@ -1,12 +1,16 @@
-import React, { RefObject } from "react";
+import React, { RefObject, FC } from "react";
 import Image from "next/image";
 import profilePic from "@/images/me.png"
 import { motion } from "framer-motion";
 
-const Biography = ({ innerRef }: { innerRef: RefObject<HTMLDivElement> }) => {
+interface BiographyProps {
+    sectionRef: RefObject<HTMLDivElement>,
+}
+
+const Biography: FC<BiographyProps> = ({ sectionRef }) => {
     return (
         <>
-            <div className="w-full relative scroll-mt-24" ref={innerRef}>
+            <div className="w-full relative scroll-mt-24" ref={sectionRef}>
                 <h2 className="font-bold text-8xl mb-64 w-full text-center dark:text-light tablet:text-6xl phone:text-4xl sm-desktop:mb-44">
                     Biography
                 </h2>
@@ -20,7 +24,7 @@ const Biography = ({ innerRef }: { innerRef: RefObject<HTMLDivElement> }) => {
                     >
                         <div className="flex flex-col justify-between items-center w-[75%] h-[full-75px]">
                             <div className="font-bold text-gray-700 rounded-full shadow-xl absolute top-0 mt-[-75px]
-                            bg-light border-[2px] border-dark/10 font-mono w-[150px] h-[150px]">
+                                          bg-light border-[2px] border-dark/10 font-mono w-[150px] h-[150px]">
                                 <Image src={profilePic} alt="ProfilePicture" className="w-[150px] h-[150px] rounded-full border-2 border-white" priority
                                     sizes="(max-width: 768px) 100vw,
                                            (max-width: 1200px) 50vw,

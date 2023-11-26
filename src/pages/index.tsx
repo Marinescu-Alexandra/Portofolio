@@ -43,7 +43,7 @@ export default function Home() {
                             Resume
                             <LinkArrow className="w-6 ml-1.5"/> 
                         </Link>
-                        <Link href="mailto:alexandra.marinescu.dev@proton.me" target={"_blank"}
+                                <Link href="mailto:alexandra.marinescu.dev@proton.me" target={"_blank"}
                             className="ml-4 text-lg font-medium capitalize text-dark underline dark:text-light"
                         >
                             Contact

@@ -1,7 +1,20 @@
-import React, { useEffect, useRef, RefObject } from "react";
+import React, { useEffect, useRef, RefObject, FC } from "react";
 import { motion, useInView, useMotionValue, useSpring, useAnimation } from "framer-motion";
 
-const AnimatedNumbers = ({ value }: { value: number }) => {
+interface AnimatedNumbersProps {
+    value: number,
+}
+
+interface DetailsProps {
+    skillLevel: number,
+    skillName: string,
+    info: string,
+}
+interface SkillsProps {
+    sectionRef: RefObject<HTMLDivElement>,
+}
+
+const AnimatedNumbers: FC<AnimatedNumbersProps> = ({ value }) => {
     const ref = useRef<HTMLInputElement>(null);
     const motionValue = useMotionValue(0);
     const springValue = useSpring(motionValue, { duration: 10000 });
@@ -22,13 +35,11 @@ const AnimatedNumbers = ({ value }: { value: number }) => {
     }, [springValue, value])
 
     return (
-        <span ref={ref} className="text-xl font-semibold absolute mt-[65px] ml-[57px] dark:text-primary"></span>
+        <span ref={ref} className="absolute text-xl font-semibold mt-[65px] ml-[57px] dark:text-primary"></span>
     )
 }
 
-const Details = ({ skillLevel, skillName, info }: {
-    skillLevel: number, skillName: string, info: string
-}) => {
+const Details: FC<DetailsProps> = ({ skillLevel, skillName, info }) => {
     const controls = useAnimation();
     const ref = useRef<HTMLInputElement>(null);
     const isInView = useInView(ref, { once: true });
@@ -42,7 +53,6 @@ const Details = ({ skillLevel, skillName, info }: {
     }, [controls, isInView, skillLevel]);
 
     return (
-        
         <div ref={ref}  className="flex flex-col justify-evenly items-center">
             <div className="flex intems-center" >
                 <figure className="stroke-dark">
@@ -72,10 +82,10 @@ const Details = ({ skillLevel, skillName, info }: {
     )
 }
 
-const Skills = ({ innerRef }: { innerRef: RefObject<HTMLDivElement> }) => {
+const Skills: FC<SkillsProps> = ({ sectionRef }) => {
     return (
         <>
-            <div className="flex justify-center items-center flex-col scroll-mt-24" ref={innerRef}>
+            <div className="flex justify-center items-center flex-col scroll-mt-24" ref={sectionRef}>
                 <h2 className="font-bold text-8xl mb-20 w-full text-center dark:text-light tablet:text-6xl phone:text-4xl">
                     Skills
                 </h2>

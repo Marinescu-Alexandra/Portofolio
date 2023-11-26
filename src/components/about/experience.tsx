@@ -1,15 +1,28 @@
-import React from "react";
+import React, {FC} from "react";
 import { motion, useScroll } from "framer-motion"
 import { useRef, RefObject } from "react";
 import CircleMarkIcon from "./circleMarkIcon";
 
-const Details = ({ position, company, companyLink, time, address, work }: {
-    position: string, company: string, companyLink: string, time: string, address: string, work: string
-}) => {
+interface DetailsProps {
+    position: string,
+    company: string,
+    companyLink: string,
+    time: string,
+    address: string,
+    work: string,
+}
+
+interface ExperienceProps {
+    sectionRef: RefObject<HTMLDivElement>,
+}
+
+const Details: FC<DetailsProps> = ({ position, company, companyLink, time, address, work }) => {
+
     const ref = useRef(null);
+
     return (
-        <li ref={ref} className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between">
-            <CircleMarkIcon refference={ref} />
+        <li ref={ref} className="flex flex-col items-center justify-between my-8 first:mt-0 last:mb-0 w-[60%] mx-auto">
+            <CircleMarkIcon targetRef={ref} />
             <motion.div
                 initial={{ y: 50 }}
                 whileInView={{ y: 0 }}
@@ -31,7 +44,7 @@ const Details = ({ position, company, companyLink, time, address, work }: {
     )
 }
 
-const Experience = ({ innerRef }: { innerRef: RefObject<HTMLDivElement> }) => {
+const Experience: FC<ExperienceProps> = ({ sectionRef }) => {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll(
         {
@@ -43,7 +56,7 @@ const Experience = ({ innerRef }: { innerRef: RefObject<HTMLDivElement> }) => {
     return (
         <>
             <div className="scroll-mt-24">
-                <h2 className="font-bold text-8xl mb-32 w-full text-center scroll-m-16 dark:text-light tablet:text-6xl phone:text-4xl" ref={innerRef}>
+                <h2 className="font-bold text-8xl mb-32 w-full text-center scroll-m-16 dark:text-light tablet:text-6xl phone:text-4xl" ref={sectionRef}>
                     Experience
                 </h2>
                 <div ref={ref} className="w-[75%] phone:w-[85%] mx-auto relative">

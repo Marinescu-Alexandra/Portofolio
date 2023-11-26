@@ -10,7 +10,7 @@ import Layout from "@/components/layouts/layout";
 import { BlueDiv, ConstellationLower, ConstellationUpper } from "@/svg/svg";
 import PageTransition from "@/components/transitions/pageTransitions";
 
-const about = () => {
+const About = () => {
 
     const [fillLength, setFillLength] = useState<number>(0);
     const handleLengthChange = (length: number) => {
@@ -79,10 +79,10 @@ const about = () => {
                                 </div>
                             </motion.div>
                         </div>
-                        <Biography innerRef={biographyRef} />
-                        <Experience innerRef={experienceRef} />
-                        <Education innerRef={educationRef} />
-                        <Skills innerRef={skillsRef} />
+                        <Biography sectionRef={biographyRef} />
+                        <Experience sectionRef={experienceRef} />
+                        <Education sectionRef={educationRef} />
+                        <Skills sectionRef={skillsRef} />
                     </div>
                 </Layout>
             </main>
@@ -92,4 +92,4 @@ const about = () => {
     )
 }
 
-export default about;
+export default About;

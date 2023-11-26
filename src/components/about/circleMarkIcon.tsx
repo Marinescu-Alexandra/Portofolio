@@ -1,11 +1,15 @@
-import React, { RefObject } from "react";
+import React, { RefObject, FC } from "react";
 import { motion, useScroll } from "framer-motion";
 
-const CircleMarkIcon = ({ refference }: { refference: RefObject<HTMLElement>}) => {
+interface CircleMarkIconProps {
+    targetRef: RefObject<HTMLElement>,
+}
+
+const CircleMarkIcon: FC<CircleMarkIconProps> = ({ targetRef }) => {
 
     const { scrollYProgress } = useScroll(
         {
-            target: refference,
+            target: targetRef,
             offset: ["center end", "center center"]
         }
     );

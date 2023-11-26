@@ -1,15 +1,26 @@
-import React from "react";
+import React, { FC } from "react";
 import { motion, useScroll } from "framer-motion"
 import { useRef, RefObject } from "react";
 import CircleMarkIcon from "./circleMarkIcon";
 
-const Details = ({ type, time, place, info }: {
-    type: string, time: string, place: string, info: string,
-}) => {
+interface DetailsProps {
+    type: string,
+    time: string,
+    place: string,
+    info: string,
+}
+
+interface EducationProps {
+    sectionRef: RefObject<HTMLDivElement>
+}
+
+const Details: FC<DetailsProps> = ({ type, time, place, info }) => {
+
     const ref = useRef(null);
+
     return (
         <li ref={ref} className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between">
-            <CircleMarkIcon refference={ref} />
+            <CircleMarkIcon targetRef={ref} />
             <motion.div
                 initial={{ y: 50 }}
                 whileInView={{ y: 0 }}
@@ -29,7 +40,7 @@ const Details = ({ type, time, place, info }: {
     )
 }
 
-const Education = ({ innerRef }: { innerRef: RefObject<HTMLDivElement> }) => {
+const Education: FC<EducationProps> = ({ sectionRef }) => {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll(
         {
@@ -41,7 +52,7 @@ const Education = ({ innerRef }: { innerRef: RefObject<HTMLDivElement> }) => {
     return (
         <>
             <div className="scroll-mt-24">
-                <h2 className="font-bold text-8xl mb-32 w-full text-center scroll-m-16 dark:text-light tablet:text-6xl phone:text-4xl" ref={innerRef}>
+                <h2 className="font-bold text-8xl mb-32 w-full text-center scroll-m-16 dark:text-light tablet:text-6xl phone:text-4xl" ref={sectionRef}>
                     Education
                 </h2>
                 <div ref={ref} className="w-[75%] phone:w-[85%] mx-auto relative">

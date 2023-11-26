@@ -4,7 +4,7 @@ import PageTransition from "@/components/transitions/pageTransitions";
 import Layout from "@/components/layouts/layout";
 import emailjs from '@emailjs/browser';
 
-const contact = () => {
+const Contact = () => {
     const form = useRef<HTMLFormElement>(null);
 
     const sendEmail = (e:FormEvent) => {
@@ -21,7 +21,7 @@ const contact = () => {
                     alert('Something went wrong, please try again.')
                 });
         }
-    };
+    }
 
     return (
         <>
@@ -61,10 +61,8 @@ const contact = () => {
                     </div>
                 </Layout>
             </main>
-            
-
         </>
     )
 }
 
-export default contact;
+export default Contact;

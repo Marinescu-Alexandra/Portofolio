@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, FC } from 'react';
 import Link from 'next/link';
 import Logo from './logo';
 import Image from 'next/image';
@@ -8,17 +8,20 @@ import { useRouter, usePathname } from 'next/navigation';
 import { GithubIcon, LinkedInIcon } from '../../../public/svg/svg';
 import { motion } from 'framer-motion';
 
-const CustomLink = ({ href, title, className = "" }: { href: string, title: string, className: string }) => {
-    const router = useRouter();
+interface CustomLinkProps {
+    href: string,
+    title: string,
+    className?: string
+}
+
+const CustomLink: FC<CustomLinkProps> = ({ href, title, className}) => {
     const pathName = usePathname();
 
     return (
         <Link href={href} className={`${className} relative group`}>
             {title}
-            <span className={`
-            h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 
-            group-hover:w-full transtion-[width] ease duration-300 dark:bg-light
-            ${pathName === href ? 'w-full' : 'w-0'}`}>&nbsp;
+            <span className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transtion-[width] 
+                              ease duration-300 dark:bg-light ${pathName === href ? 'w-full' : 'w-0'}`}>&nbsp;
             </span>
         </Link>
     )

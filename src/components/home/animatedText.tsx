@@ -1,5 +1,10 @@
-import React from "react";
+import React, {FC} from "react";
 import { motion } from "framer-motion";
+
+interface AnimatedTextProps {
+    text: string,
+    className?: string,
+}
 
 const quote = {
     initial: {
@@ -28,7 +33,7 @@ const singleWord = {
     }
 }
 
-const AnimatedText = ({text, className}: {text: string, className?: string}) => {
+const AnimatedText: FC<AnimatedTextProps> = ({text, className}) => {
     return (
         <div className="w-full flex items-center justify-center text-center mx-auto py-2 overflow-hidden">
             <motion.h1 className={`inline-block w-full text-dark font-bold capitalize
