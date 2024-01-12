@@ -30,11 +30,11 @@ export default function Home() {
                     <div className="w-1/2 flex flex-col items-center self-center phone:w-[85%] tablet:w-[80%] laptop:w-[75%] sm-desktop:w-[70%]  ">
                     <AnimatedText text="Turning Vision Into Reality With Code And Design." className=""/>
                     <p className="font-medium text-2xl my-4 phone:text-base tablet:text-lg sm-desktop:text-2xl">
-                        As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications. 
-                        Explore my latest projects and articles, showcasing my expertise in React.js and web development.    
+                        As a passionate developer, I am dedicated to turning ideas into innovative applications. 
+                        Explore my latest projects and articles, showcasing my expertise in application development.    
                     </p>
                     <div className="flex items-center self-start mt-2">
-                        <Link href="/dummy.pdf" target={"_blank"}
+                                <Link href="/files/dummy.pdf" target={"_blank"}
                             download={true}
                             className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold
                                         hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark

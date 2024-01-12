@@ -38,9 +38,9 @@ const Biography: FC<BiographyProps> = ({ sectionRef }) => {
                                 Software Developer | Bucharest, Romania
                             </span>
                             <p className="font-medium my-4 text-base mb-24 text-center text-dark dark:text-light">
-                                Hello, my name is Alexandra, I am a web developer and UI/UX designer with a passion for creating beautiful, functional,
-                                and user-centered digital experiences. With 1 year of experience in the field. I am always looking for
-                                new and innovative ways to bring my clients' visions to life.
+                                Hello, my name is Alexandra, I am a software developer with a passion for creating beautiful, functional,
+                                and user-centered digital experiences. With 1 year of experience in the field, I am always looking for
+                                new challenges and growing as much as possible.
                             </p>
                         </div>
                     </div>

@@ -1,16 +1,16 @@
 import React, {FC} from "react";
 import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
-import webscraper from "@/images/webscraper.png"
 
 interface ProjectCardProps {
     title: string,
     link: string,
     info: string,
     icons: Array<StaticImageData>,
+    image: StaticImageData
 }
 
-const ProjectCard: FC<ProjectCardProps> = ({ title, link, info, icons }) => {
+const ProjectCard: FC<ProjectCardProps> = ({ title, link, info, icons, image }) => {
     return (
         <>
             <div className="w-full flex flex-row justify-center items-center sm-desktop:flex-col">
@@ -25,10 +25,10 @@ const ProjectCard: FC<ProjectCardProps> = ({ title, link, info, icons }) => {
                         repeatType: "mirror",
                     }}
                 >
-                    <Image src={webscraper}
+                    <Image src={image}
                         alt="ProfilePicture"
                         className="w-full h-full rounded-2xl rounded-r-none sm-desktop:rounded-b-none sm-desktop:rounded-t-2xl"
-                        style={{ objectFit: "fill" }}
+                        style={{ objectFit: 'contain'}}
                         priority
                         sizes="(max-width: 768px) 100vw,
                                (max-width: 1200px) 50vw,
@@ -49,7 +49,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ title, link, info, icons }) => {
                     <h2 className="font-semibold text-2xl my-4 mx-6 dark:text-light">
                         {title}
                     </h2>
-                    <p className="mx-6 font- text-sm mb-4 dark:text-light">
+                    <p className="mx-6 font- text-lg mb-4 dark:text-light">
                         {info}
                     </p>
                     <div className="flex flex-row justify-left items-center mx-6 space-x-4 mb-4">
@@ -68,7 +68,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ title, link, info, icons }) => {
                         )}
                     </div>
                     <div className="flex text-medium font-medium text-light mx-6 mb-6 dark:text-dark">
-                        <a className="rounded-lg bg-dark px-2 py-1 left-0 dark:bg-black dark:text-light dark:border-2 dark:border-light">
+                        <a className="rounded-lg bg-dark px-2 py-1 left-0 dark:bg-black dark:text-light dark:border-2 dark:border-light" href={link}>
                             See full details on GitHub
                         </a>
                     </div>

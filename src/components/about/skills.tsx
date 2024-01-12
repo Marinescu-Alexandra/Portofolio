@@ -54,7 +54,7 @@ const Details: FC<DetailsProps> = ({ skillLevel, skillName, info }) => {
 
     return (
         <div ref={ref}  className="flex flex-col justify-evenly items-center">
-            <div className="flex intems-center" >
+            <div className="flex intems-center mx-4" >
                 <figure className="stroke-dark">
                     <svg className="-rotate-90" width="150" height="150" viewBox="0 0 440 440" >
                         <motion.circle  cx="220" cy="220" r="190" className="stroke-[24px] fill-none" id="shadow"
@@ -72,12 +72,12 @@ const Details: FC<DetailsProps> = ({ skillLevel, skillName, info }) => {
                 <AnimatedNumbers value={skillLevel * 100}/>
             </div>
 
-            <h2 className="font-bold text-lg my-2 dark:text-primary">
+            <h2 className="font-bold text-lg dark:text-primary">
                 {skillName}
             </h2>
-            <p className="font-normal text-sm w-[90%] text-center dark:text-light">
+            {/* <p className="font-normal text-sm w-[90%] text-center dark:text-light">
                 {info}
-            </p>
+            </p> */}
         </div>
     )
 }
@@ -95,14 +95,14 @@ const Skills: FC<SkillsProps> = ({ sectionRef }) => {
                     transition={{ duration: 0.5, type: "spring" }}
                 >
                     <div className="w-[100%] h-auto flex flex-row justify-around items-center my-10 phone:flex-col phone:space-y-6 phone:my-4">
-                        <Details skillLevel={0.9} skillName="NodeJS" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
-                        <Details skillLevel={0.8} skillName="React" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
-                        <Details skillLevel={0.95} skillName="JavaScript" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
+                        <Details skillLevel={0.95} skillName="NodeJS" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
+                        <Details skillLevel={0.85} skillName="React" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
+                        <Details skillLevel={0.9} skillName="Tailwind" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
                     </div>
                     <div className="w-[100%] h-auto flex flex-row justify-around items-center my-10 phone:flex-col phone:space-y-6 phone:my-4">
-                        <Details skillLevel={0.9} skillName="NodeJS" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
-                        <Details skillLevel={0.8} skillName="React" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
                         <Details skillLevel={0.95} skillName="JavaScript" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
+                        <Details skillLevel={0.95} skillName="Swift" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
+                        <Details skillLevel={0.85} skillName="Python" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
                     </div>
                 </motion.div>
             </div>

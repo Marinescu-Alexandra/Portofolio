@@ -63,7 +63,7 @@ const Experience: FC<ExperienceProps> = ({ sectionRef }) => {
                     <motion.div style={{ scaleY: scrollYProgress }} className="absolute left-9 top-5 w-[4px] h-full origin-top bg-dark dark:bg-light" />
                     <ul className="w-full flex flex-col items-start justify-between ml-4">
                         <Details
-                            position="iOS Developer" company="IT Smart Systems" companyLink="www.google.com"
+                            position="iOS Developer" company="IT Smart Systems" companyLink="https://www.itsmartsystems.eu/"
                             time="2022-2023" address="Bucuresti, Romania"
                             work="I was responsible for maintaining and implementing features for the Croatian banking application 
                             Hrvatska poštanska banka. Collaborated with the BA team to smoothly incorporate RESTful APIs and conducted 
@@ -72,14 +72,14 @@ const Experience: FC<ExperienceProps> = ({ sectionRef }) => {
                             Improved communication skills through direct customer interaction. "
                         />
                         <Details
-                            position="iOS Developer Intern" company="IT Smart Systems" companyLink="www.google.com"
+                            position="iOS Developer Intern" company="IT Smart Systems" companyLink="https://www.itsmartsystems.eu/"
                             time="2022-2022" address="Bucuresti, Romania"
                             work="I Received mentoring from senior colleagues throughout the process of learning and completing various 
                             challenges by creating iOS applications&courses, fortifying my knowledge on Autolayouts, Views, Data Collections 
                             and API integration."
                         />
                         <Details
-                            position="Web Developer" company="Lander Sport SRL" companyLink="www.google.com"
+                            position="Support IT" company="Lander Sport SRL" companyLink="https://www.lander.ro/"
                             time="2019-2020" address="Bucuresti, Romania"
                             work="Maintained and implemented features for Croatian banking application Hrvatska poštanska banka.
                             search engine, including improving the accuracy and relevance of search results and
