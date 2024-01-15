@@ -57,7 +57,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ title, link, info, icons, image }) 
                             <Image
                                 src={icon}
                                 alt="nextjsImage"
-                                className="rounded-full bg-light sm-desktop:h-[30px] sm-desktop:w-[30px] border-2"
+                                className="rounded-full bg-light sm-desktop:h-[40px] sm-desktop:w-[40px] border-2"
                                 width={50}
                                 height={50}
                                 priority

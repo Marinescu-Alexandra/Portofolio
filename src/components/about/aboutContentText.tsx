@@ -16,7 +16,7 @@ const ContentText: FC<ContentTextProps> = ({ className, text, length, onLengthCh
             onHoverStart={() => onLengthChange(length)}
             onHoverEnd={() => onLengthChange(0)}
             whileHover={{
-                y: -10,
+                y: -5,
                 transition: { type: "spring", duration: 0.2 },
             }}
             onClick={onClick}
