@@ -1,4 +1,4 @@
-import React, {FC} from "react";
+import React, { FC } from "react";
 import { motion, useScroll } from "framer-motion"
 import { useRef, RefObject } from "react";
 import CircleMarkIcon from "./circleMarkIcon";
@@ -81,9 +81,8 @@ const Experience: FC<ExperienceProps> = ({ sectionRef }) => {
                         <Details
                             position="Support IT" company="Lander Sport SRL" companyLink="https://www.lander.ro/"
                             time="2019-2020" address="Bucuresti, Romania"
-                            work="Maintained and implemented features for Croatian banking application Hrvatska poštanska banka.
-                            search engine, including improving the accuracy and relevance of search results and
-                            developing new tools for data analysis and visualization"
+                            work="I was responsible for maintaining and updating backup systems, repairing, maintaining and upgrading computeres and printers, 
+                            updating content on every website owned by the company, designing and deploying newsletters for clients."
                         />
                     </ul>
                 </div>
