@@ -8,6 +8,7 @@ import tailwind from "@/icons/tailwind.png"
 import angular from '@/icons/angular.png'
 import mongodb from '@/icons/mongodb.png'
 import socketio from '@/icons/socketio.png'
+import redux from '@/icons/redux.png'
 import js from '@/icons/js.jpg'
 import Layout from "@/components/layouts/layout";
 import PageTransition from "@/components/transitions/pageTransitions";
@@ -27,7 +28,7 @@ const Projects = () => {
     }[] = [{ title: "Web Scraper Application", link: "https://github.com/Marinescu-Alexandra/WebScraper", icons: [nodejs, js, angular], image: webScraper,info: "This project is simple web scraping application, meant to scrape content from https://wsa-test.vercel.app/. The scraped data is returned in a JSON format, and can be filtered by multiple queries.The scraped data is displayed on a frontend server and can be easily copied with a button." },
             { title: "Personal Portofolio", link: "https://github.com/Marinescu-Alexandra/Portofolio", icons: [nextjs, typescript, tailwind], image:portofolio, info: "This project is my personal portofolio with a fully responsive desgin, animated elements and using lastest technologies." },
             { title: "Resume Builder", link: "https://github.com/Marinescu-Alexandra/ResumeBuilder", icons: [nodejs, js], image: resumebuilder, info: "This project is a backend implementation for generating automated resumes based on a chosen theme and input json." },
-            { title: "Lotus Messenger", link: "https://github.com/Marinescu-Alexandra/LotusMessenger", icons: [nextjs, typescript, tailwind, mongodb, socketio], image: messenger, info: "This project is simple chat application, where regular users cand create accounts, login into the acount and and receive real time messages, media  and notifications. This project is still underwork." },]
+            { title: "Lotus Messenger", link: "https://github.com/Marinescu-Alexandra/LotusMessenger", icons: [nextjs, typescript, tailwind, mongodb, socketio, redux], image: messenger, info: "This project is simple chat application, where regular users cand create accounts, login into the acount and and receive real time messages, media  and notifications. This project is still underwork." },]
     
     return (
         <>

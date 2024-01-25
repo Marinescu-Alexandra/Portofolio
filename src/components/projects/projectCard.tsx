@@ -35,7 +35,8 @@ const ProjectCard: FC<ProjectCardProps> = ({ title, link, info, icons, image }) 
                                50vw"
                     />
                 </motion.div>
-                <motion.div className="w-[36%] h-[500px] rounded-r-2xl flex flex-col justify-around items-left sm-desktop:w-[90%]
+
+                <motion.div className="w-[36%] h-[500px] rounded-r-2xl flex flex-col justify-around items-left sm-desktop:w-[90%] lg-desktop:w-[60%]
                 sm-desktop:rounded-t-none sm-desktop:rounded-b-2xl sm-desktop:h-auto shadow-glow bg-white dark:bg-dark gap-2" 
                     initial={{ boxShadow: '0 0 5px #65ddf4' }}
                     animate={{ boxShadow: '0 0 22px #65ddf4' }}
@@ -52,12 +53,12 @@ const ProjectCard: FC<ProjectCardProps> = ({ title, link, info, icons, image }) 
                     <p className="mx-6 font- text-lg mb-4 dark:text-light">
                         {info}
                     </p>
-                    <div className="flex flex-row justify-left items-center mx-6 space-x-4 mb-4">
+                    <div className=" grid grid-rows-2 grid-cols-5 mx-auto gap-x-4 ml-6 gap-y-2 sm-desktop:grid-cols-8">
                         {icons.map((icon) =>
                             <Image
                                 src={icon}
                                 alt="nextjsImage"
-                                className="rounded-full bg-light sm-desktop:h-[40px] sm-desktop:w-[40px] border-2"
+                                className="rounded-full bg-light sm-desktop:h-[50px] sm-desktop:w-[50px] border-2"
                                 width={50}
                                 height={50}
                                 priority

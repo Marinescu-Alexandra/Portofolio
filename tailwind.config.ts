@@ -42,6 +42,8 @@ const config: Config = {
             },
         },
         screens: {
+            'lg-desktop': { max: '1780px' },
+
             'desktop': { max: '1560px' },
             // => @media (max-width: 1560px) { ... }
             'sm-desktop': { max: '1270px' },

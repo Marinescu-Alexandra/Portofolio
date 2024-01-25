@@ -30,8 +30,8 @@ export default function Home() {
                     <div className="w-1/2 flex flex-col items-center self-center phone:w-[85%] tablet:w-[80%] laptop:w-[75%] sm-desktop:w-[70%]  ">
                     <AnimatedText text="Turning Vision Into Reality With Code And Design." className=""/>
                     <p className="font-medium text-2xl my-4 phone:text-base tablet:text-lg sm-desktop:text-2xl">
-                        As a passionate developer, I am dedicated to turning ideas into innovative applications. 
-                        Explore my latest projects and articles, showcasing my expertise in application development.    
+                                As a passionate and enthusiastic software engineer, I am always looking to improve and broaden my knowledge. I am constantly
+                                learning and testing new technologies.     
                     </p>
                     <div className="flex items-center self-start mt-2">
                                 <Link href="/files/cv_alexandra_marinescu_2024.pdf" target={"_blank"}
