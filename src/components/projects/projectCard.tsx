@@ -53,7 +53,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ title, link, info, icons, image }) 
                     <p className="mx-6 font- text-lg mb-4 dark:text-light">
                         {info}
                     </p>
-                    <div className=" grid grid-rows-2 grid-cols-5 mx-auto gap-x-4 ml-6 gap-y-2 sm-desktop:grid-cols-8">
+                    <div className={`grid mb-4 grid-cols-5 mx-auto gap-x-4 ml-6 gap-y-2 sm-desktop:grid-cols-8 phone:grid-cols-5 ${icons.length >= 5 ? 'grid-rows-2' : 'grid-rows-1' }`}>
                         {icons.map((icon) =>
                             <Image
                                 src={icon}

@@ -52,7 +52,7 @@ const config: Config = {
             // => @media (max-width: 1024px) { ... }
             'tablet': { max: '860px' },
             // => @media (max-width: 640px) { ... }
-            'phone': { max: '640px' },
+            'phone': { max: '700px' },
             // => @media (max-width: 640px) { ... }
         },
     },
