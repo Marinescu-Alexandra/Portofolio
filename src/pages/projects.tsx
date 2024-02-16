@@ -25,10 +25,14 @@ const Projects = () => {
         info: string,
         icons: Array<StaticImageData>,
         image: StaticImageData
-    }[] = [{ title: "Web Scraper Application", link: "https://github.com/Marinescu-Alexandra/WebScraper", icons: [nodejs, js, angular], image: webScraper,info: "This project is simple web scraping application, meant to scrape content from https://wsa-test.vercel.app/. The scraped data is returned in a JSON format, and can be filtered by multiple queries.The scraped data is displayed on a frontend server and can be easily copied with a button." },
-            { title: "Personal Portofolio", link: "https://github.com/Marinescu-Alexandra/Portofolio", icons: [nextjs, typescript, tailwind], image:portofolio, info: "This project is my personal portofolio with a fully responsive desgin, animated elements and using lastest technologies." },
-            { title: "Resume Builder", link: "https://github.com/Marinescu-Alexandra/ResumeBuilder", icons: [nodejs, js], image: resumebuilder, info: "This project is a backend implementation for generating automated resumes based on a chosen theme and input json." },
-            { title: "Lotus Messenger", link: "https://github.com/Marinescu-Alexandra/LotusMessenger", icons: [nextjs, typescript, tailwind, mongodb, socketio, redux], image: messenger, info: "This project is simple chat application, where regular users cand create accounts, login into the acount and and receive real time messages, media  and notifications. This project is still underwork." },]
+        videoLink: string
+    }[] = [
+            { title: "Lotus Messenger", link: "https://github.com/Marinescu-Alexandra/LotusMessenger", icons: [nextjs, typescript, tailwind, mongodb, socketio, redux], image: messenger, info: "This project is simple chat application, where users cand create accounts, login into the acounts and and receive real time messages, media and notifications", videoLink: 'https://www.youtube.com/embed/Wqlzex300ls?si=BguTTGgOE8r7AJSE' },
+            { title: "Web Scraper Application", link: "https://github.com/Marinescu-Alexandra/WebScraper", icons: [nodejs, js, angular], image: webScraper, info: "This project is simple web scraping application, meant to scrape content from https://wsa-test.vercel.app/. The scraped data is returned in a JSON format, and can be filtered by multiple queries.The scraped data is displayed on a frontend server and can be easily copied with a button.", videoLink: '' },
+            { title: "Resume Builder", link: "https://github.com/Marinescu-Alexandra/ResumeBuilder", icons: [nodejs, js], image: resumebuilder, info: "This project is a backend implementation for generating automated resumes based on a chosen theme and input json.", videoLink: '' },
+            { title: "Personal Portofolio", link: "https://github.com/Marinescu-Alexandra/Portofolio", icons: [nextjs, typescript, tailwind], image: portofolio, info: "This project is my personal portofolio with a fully responsive desgin, animated elements and using lastest technologies.", videoLink: '' },
+            
+        ]
     
     return (
         <>
@@ -41,8 +45,8 @@ const Projects = () => {
                 <Layout>
                     <div className="min-h-screen w-[70%] flex-col flex justify-center items-center mx-auto tablet:w-[90%] 
                                     gap-y-28 mt-24 sm-desktop:gap-y-20">
-                        {details.map((project) =>
-                            <ProjectCard title={`${project.title}`} link={`${project.link}`} info={`${project.info}`} icons={project.icons} image={project.image} />
+                        {details.map((project, index) =>
+                            <ProjectCard title={`${project.title}`} link={`${project.link}`} info={`${project.info}`} icons={project.icons} image={project.image} videoLink={project.videoLink} key={index}/>
                         )}
                     </div>
                 </Layout>

@@ -7,10 +7,11 @@ interface ProjectCardProps {
     link: string,
     info: string,
     icons: Array<StaticImageData>,
-    image: StaticImageData
+    image: StaticImageData,
+    videoLink: string
 }
 
-const ProjectCard: FC<ProjectCardProps> = ({ title, link, info, icons, image }) => {
+const ProjectCard: FC<ProjectCardProps> = ({ title, link, info, icons, image, videoLink }) => {
     return (
         <>
             <div className="w-full flex flex-row justify-center items-center sm-desktop:flex-col">
@@ -25,15 +26,38 @@ const ProjectCard: FC<ProjectCardProps> = ({ title, link, info, icons, image }) 
                         repeatType: "mirror",
                     }}
                 >
-                    <Image src={image}
-                        alt="ProfilePicture"
-                        className="w-full h-full rounded-2xl rounded-r-none sm-desktop:rounded-b-none sm-desktop:rounded-t-2xl"
-                        style={{ objectFit: 'contain'}}
-                        priority
-                        sizes="(max-width: 768px) 100vw,
+
+                    {
+                        videoLink !== '' ?
+                            <iframe 
+                                className="w-full h-full rounded-2xl rounded-r-none sm-desktop:rounded-b-none"
+                                src={`${videoLink}`} 
+                                title="YouTube video player" 
+                                frameBorder={0}
+                                allow="accelerometer; 
+                                autoplay; 
+                                clipboard-write; 
+                                encrypted-media; 
+                                gyroscope; 
+                                picture-in-picture; 
+                                web-share" 
+                                allowFullScreen
+                            >
+                                
+                            </iframe>
+
+                            :
+                            <Image src={image}
+                                alt="ProfilePicture"
+                                className="w-full h-full rounded-2xl rounded-r-none sm-desktop:rounded-b-none sm-desktop:rounded-t-2xl"
+                                style={{ objectFit: 'contain' }}
+                                priority
+                                sizes="(max-width: 768px) 100vw,
                                (max-width: 1200px) 50vw,
                                50vw"
-                    />
+                            />
+                    }
+
                 </motion.div>
 
                 <motion.div className="w-[36%] h-[500px] rounded-r-2xl flex flex-col justify-around items-left sm-desktop:w-[90%] lg-desktop:w-[60%]
@@ -54,9 +78,10 @@ const ProjectCard: FC<ProjectCardProps> = ({ title, link, info, icons, image }) 
                         {info}
                     </p>
                     <div className={`grid mb-4 grid-cols-5 mx-auto gap-x-4 ml-6 gap-y-2 sm-desktop:grid-cols-8 phone:grid-cols-5 ${icons.length >= 5 ? 'grid-rows-2' : 'grid-rows-1' }`}>
-                        {icons.map((icon) =>
+                        {icons.map((icon, index) =>
                             <Image
                                 src={icon}
+                                key={index}
                                 alt="nextjsImage"
                                 className="rounded-full bg-light sm-desktop:h-[50px] sm-desktop:w-[50px] border-2"
                                 width={50}
