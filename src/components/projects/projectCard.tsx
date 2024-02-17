@@ -30,7 +30,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ title, link, info, icons, image, vi
                     {
                         videoLink !== '' ?
                             <iframe 
-                                className="w-full h-full rounded-2xl rounded-r-none sm-desktop:rounded-b-none"
+                                className="w-full h-full rounded-2xl rounded-r-none sm-desktop:rounded-b-none sm-desktop:rounded-t-2xl"
                                 src={`${videoLink}`} 
                                 title="YouTube video player" 
                                 frameBorder={0}
