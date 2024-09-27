@@ -95,14 +95,14 @@ const Skills: FC<SkillsProps> = ({ sectionRef }) => {
                     transition={{ duration: 0.5, type: "spring" }}
                 >
                     <div className="w-[100%] h-auto flex flex-row justify-around items-center my-10 phone:flex-col phone:space-y-6 phone:my-4">
-                        <Details skillLevel={0.95} skillName="NodeJS" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
-                        <Details skillLevel={0.85} skillName="React" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
-                        <Details skillLevel={0.9} skillName="Tailwind" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
+                        <Details skillLevel={0.90} skillName="Swift" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
+                        <Details skillLevel={0.75} skillName="React" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
+                        <Details skillLevel={0.75} skillName="Tailwind" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
                     </div>
                     <div className="w-[100%] h-auto flex flex-row justify-around items-center my-10 phone:flex-col phone:space-y-6 phone:my-4">
-                        <Details skillLevel={0.95} skillName="JavaScript" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
-                        <Details skillLevel={0.95} skillName="Swift" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
-                        <Details skillLevel={0.85} skillName="Python" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
+                        <Details skillLevel={0.75} skillName="JavaScript" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
+                        <Details skillLevel={0.65} skillName="NodeJS" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
+                        <Details skillLevel={0.60} skillName="Python" info="NodeJS is one of my favourite frameworks, used in 4 personal projects." />
                     </div>
                 </motion.div>
             </div>

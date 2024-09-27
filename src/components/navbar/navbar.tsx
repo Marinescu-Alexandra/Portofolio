@@ -215,10 +215,6 @@ const NavBar = () => {
                 <CustomLink href="/contact" title="Contact" className='ml-4' />
             </nav>
 
-            <div className='top-2 flex-1 sm-desktop:hidden'>
-                <Logo />
-            </div>
-
             <nav className='flex flex-row items-center justify-end flex-wrap flex-1 sm-desktop:hidden'>
 
                 <motion.a href="https://github.com/Marinescu-Alexandra" target={"_blank"}

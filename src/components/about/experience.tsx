@@ -63,6 +63,14 @@ const Experience: FC<ExperienceProps> = ({ sectionRef }) => {
                     <motion.div style={{ scaleY: scrollYProgress }} className="absolute left-9 top-5 w-[4px] h-full origin-top bg-dark dark:bg-light" />
                     <ul className="w-full flex flex-col items-start justify-between ml-4">
                         <Details
+                            position="iOS Engineer" company="Luxon Tech" companyLink="https://luxon.com/"
+                            time="2023-Present" address="Bucuresti, Romania"
+                            work="As part of the mobile development team for LuxonPay, I collaborated closely with my senior colleague to refactor a significant portion 
+                            of the app’s outdated architecture, transitioning it to a more stable and maintainable structure. I also contributed to the implementation of new features and 
+                            a complete redesign of the application's interface, introduced unit testing to ensure ongoing code quality and stability, 
+                            while maintaining these tests throughout development."
+                        />
+                        <Details
                             position="iOS Developer" company="IT Smart Systems" companyLink="https://www.itsmartsystems.eu/"
                             time="2022-2023" address="Bucuresti, Romania"
                             work="I was responsible for maintaining and implementing features for the Croatian banking application 

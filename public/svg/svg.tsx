@@ -91,7 +91,7 @@ export const ConstellationUpper=  ({ className, ...rest }: {className: string}) 
         initial={{ pathLength: 0}}
         animate={{ pathLength: 0.47 }}
         transition={{
-            duration: 9.9,
+            duration: 7.0,
             ease: "easeInOut",
             repeat: 0,
             repeatType: "loop",
@@ -112,7 +112,7 @@ export const ConstellationUpper=  ({ className, ...rest }: {className: string}) 
             duration: 2,
             ease: "easeInOut",
             repeat: 0,
-            delay: 1.8,
+            delay: 1.4,
         }}
     >
       {"Passionate"}
@@ -131,7 +131,7 @@ export const ConstellationUpper=  ({ className, ...rest }: {className: string}) 
         ease: "easeInOut",
         repeat: 0,
         repeatType: "loop",
-        delay: 2.6,
+        delay: 2.0,
     }}
 >
     {"Team player"}
@@ -150,7 +150,7 @@ export const ConstellationUpper=  ({ className, ...rest }: {className: string}) 
             ease: "easeInOut",
             repeat: 0,
             repeatType: "loop",
-            delay: 4,
+            delay: 3,
         }}
     >
         {"Problem solver"}
@@ -169,7 +169,7 @@ export const ConstellationUpper=  ({ className, ...rest }: {className: string}) 
             ease: "easeInOut",
             repeat: 0,
             repeatType: "loop",
-            delay: 5,
+            delay: 3.5,
         }}
     >
       {"Creative"}
@@ -188,7 +188,7 @@ export const ConstellationUpper=  ({ className, ...rest }: {className: string}) 
             ease: "easeInOut",
             repeat: 0,
             repeatType: "loop",
-            delay: 5.8,
+            delay: 4.0,
         }}
     >
       {"Adaptable"}
@@ -206,7 +206,7 @@ export const ConstellationUpper=  ({ className, ...rest }: {className: string}) 
             duration: 2,
             ease: "easeInOut",
             repeat: 0,
-            delay: 8,
+            delay: 6,
         }}
         whileHover={{ fontSize: 20, }}
     >
@@ -233,7 +233,7 @@ export const ConstellationLower =  ({ className, ...rest }: {className: string})
         initial={{ pathLength: 0, pathOffset: 0}}
         animate={{ pathLength: 0.45, pathOffset: 0 }}
         transition={{
-        duration: 10,
+        duration: 7.2,
         ease: "easeInOut",
         repeat: 0,
         repeatType: "loop",
