@@ -13,7 +13,9 @@ export default function Home() {
     <>
         <Head>
             <title>Alexandra Marinescu</title>
-            <meta name="description" content="content" />
+            <meta name="title" content="Alexandra Marinescu - iOS Developer" />
+            <meta name="description" content="This is my personal portofolio, here you can get to know me and my work." />
+            <meta name="image" content="https://www.alexandra-marinescu.dev/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fme.f2f04442.png&w=1920&q=75" />
         </Head>
         <PageTransition/>  
         <main className="w-full min-h-screen flex items-center mt-5 text-dark dark:text-light">
